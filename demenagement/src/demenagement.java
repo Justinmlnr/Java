@@ -1,4 +1,23 @@
 public class demenagement {
+    public static void main (String[] args) {
+        int nombreColis = 34;
+        int capaciteCamions = 9;
+        int cartonsRestants = nombreColis;
+        int nombreVoyages = 0;
+
+        while (cartonsRestants > 0) {
+            nombreVoyages++;
+
+            if (cartonsRestants >= capaciteCamions) {
+            System.out.println("un voyage de " + capaciteCamions + " cartons.");
+            cartonsRestants = cartonsRestants - capaciteCamions;
+            } else {
+                System.out.println("un voyage de " + cartonsRestants + " cartons.");
+                cartonsRestants = 0;
+            }
+        }
+        System.out.println("En tout il y a eu " + nombreVoyages + " voyages");
+    }
 }
 
 // cartons = 34
